@@ -1,6 +1,7 @@
 {
   "name": "warden-knives",
   "version": "0.1.0",
+  "homepage": "http://www.warden-knives.com/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
