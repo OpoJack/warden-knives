@@ -23,7 +23,7 @@ const Header = ({ currentUser, hidden }) => (
         SHOP
       </Link>
       <Link className="option" to="/contact">
-        Contact
+        CONTACT
       </Link>
       {
         //If user is logged in, render the Sign Out button
