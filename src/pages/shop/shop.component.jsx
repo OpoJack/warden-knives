@@ -1,11 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { connect } from "react-redux";
 
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
 import CollectionPage from "../collection/collection.component";
-
-import { selectCollections } from "../../redux/shop/shop.selectors";
 
 const ShopPage = ({ match }) => {
   return (
