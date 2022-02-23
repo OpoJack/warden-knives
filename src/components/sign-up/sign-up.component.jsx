@@ -52,7 +52,7 @@ class SignUp extends React.Component {
   };
 
   render() {
-    const { displayName, email, password, confirmPassword } = this.state;
+    //const  = this.state;
     return (
       <div className="sign-up">
         <h2 className="title">Create account</h2>
