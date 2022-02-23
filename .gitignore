@@ -11,6 +11,9 @@
 # production
 /build
 src/firebase
+.firebaserc
+.firebaseignore
+.github/workflows/
 
 # misc
 .DS_Store

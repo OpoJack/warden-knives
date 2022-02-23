@@ -1,5 +1,5 @@
-import CartActionTypes from './cart.types';
-import { addItemToCart, removeItemFromCart} from './cart.utils';
+import CartActionTypes from "./cart.types";
+import { addItemToCart, removeItemFromCart } from "./cart.utils";
 
 const INITIAL_STATE = {
   hidden: true,
@@ -7,34 +7,36 @@ const INITIAL_STATE = {
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+  switch (action.type) {
     //TOGGLE_CART_HIDDEN is a toggle to make the cart visible or hidden
     case CartActionTypes.TOGGLE_CART_HIDDEN:
-      return { 
+      return {
         ...state,
-        hidden: !state.hidden
+        hidden: !state.hidden,
       };
     //ADD_ITEM adds the payload to the cartItems array
     case CartActionTypes.ADD_ITEM:
-      return{
+      return {
         ...state,
-        cartItems: addItemToCart(state.cartItems, action.payload)
+        cartItems: addItemToCart(state.cartItems, action.payload),
       };
     case CartActionTypes.REMOVE_ITEM:
-      return{
+      return {
         ...state,
-        cartItems: removeItemFromCart(state.cartItems, action.payload)
+        cartItems: removeItemFromCart(state.cartItems, action.payload),
       };
     case CartActionTypes.CLEAR_FROM_CART:
-      return{
+      return {
         ...state,
         //filter() returns back anything that yields true
         //If cartItems.id !== item we're trying to filter out, then we return it
-        cartItems: state.cartItems.filter(cartItem => cartItem.id !== action.payload.id)
-      }
+        cartItems: state.cartItems.filter(
+          (cartItem) => cartItem.id !== action.payload.id
+        ),
+      };
     default:
       return state;
   }
-}
+};
 
 export default cartReducer;
