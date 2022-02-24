@@ -17,13 +17,21 @@ const Header = ({ currentUser, hidden }) => (
     <Link className="logo-container" to="/">
       <Logo className="logo" />
     </Link>
-
+    <Link className="title" to="/">
+      WARDEN KNIVES
+    </Link>
     <div className="options">
       <Link className="option" to="/shop">
-        SHOP
+        SHOP ALL
       </Link>
       <Link className="option" to="/contact">
-        CONTACT
+        SHOP BY MAKER
+      </Link>
+      <Link className="option" to="/shop">
+        SHOP BY SHAPE
+      </Link>
+      <Link className="option" to="/shop">
+        ACCESSORIES
       </Link>
       {
         //If user is logged in, render the Sign Out button

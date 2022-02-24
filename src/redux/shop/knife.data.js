@@ -1,12 +1,12 @@
-const SHOP_DATA = {
+const PRODUCT_DATA = {
   hats: {
     id: 1,
-    title: "Hats",
+    title: "Ashi",
     routeName: "hats",
     items: [
       {
         id: 1,
-        name: "SHOPDATA Brim NOT IN USE",
+        name: "SHOPDATA Brim",
         imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
         price: 25,
       },
@@ -62,7 +62,7 @@ const SHOP_DATA = {
   },
   sneakers: {
     id: 2,
-    title: "Sneakers",
+    title: "Konosuke",
     routeName: "sneakers",
     items: [
       {
@@ -117,7 +117,7 @@ const SHOP_DATA = {
   },
   jackets: {
     id: 3,
-    title: "Jackets",
+    title: "Mazaki",
     routeName: "jackets",
     items: [
       {
@@ -154,7 +154,7 @@ const SHOP_DATA = {
   },
   womens: {
     id: 4,
-    title: "Womens",
+    title: "Takeda",
     routeName: "womens",
     items: [
       {
@@ -203,7 +203,7 @@ const SHOP_DATA = {
   },
   mens: {
     id: 5,
-    title: "Mens",
+    title: "Watanabe",
     routeName: "mens",
     items: [
       {
@@ -246,4 +246,4 @@ const SHOP_DATA = {
   },
 };
 
-export default SHOP_DATA;
+export default PRODUCT_DATA;

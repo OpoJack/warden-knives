@@ -8,12 +8,12 @@ export const selectCollections = createSelector(
   (shop) => shop.collections
 );
 
-export const selectCollection = memoize((collectionUrlParam) => {
+export const selectCollection = (collectionUrlParam) => {
   return createSelector(
     [selectCollections],
     (collections) => collections[collectionUrlParam]
   );
-});
+};
 
 export const selectCollectionsForPreview = createSelector(
   [selectCollections],
