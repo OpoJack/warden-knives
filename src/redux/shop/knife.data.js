@@ -1,8 +1,8 @@
 const PRODUCT_DATA = {
-  hats: {
+  ashi: {
     id: 1,
     title: "Ashi",
-    routeName: "hats",
+    routeName: "hatsss",
     items: [
       {
         id: 1,

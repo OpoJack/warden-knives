@@ -6,7 +6,7 @@ const INITIAL_STATE = {
       imageUrl:
         "/images/knife-img/ashi/240stainlessgyuto/Ashi-Ginga-Stainless-Gyuto-240mm-Knife_1200x.jpeg", // local file in public/images/
       id: 1,
-      linkUrl: "shop/hats",
+      linkUrl: "shop/ashi",
     },
     {
       title: "konosuke",
