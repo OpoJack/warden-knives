@@ -14,7 +14,7 @@ const INITIAL_STATE = {
       imageUrl:
         "/images/knife-img/konosuke/210hd2wagyuto/konosuke-hd2-210mm-wa-gyuto-34.jpeg", // local file in public/images/
       id: 2,
-      linkUrl: "shop/jackets",
+      linkUrl: "shop/konosuke",
     },
     {
       title: "mazaki",
@@ -22,7 +22,7 @@ const INITIAL_STATE = {
       imageUrl:
         "/images/knife-img/mazaki/210kasumigyuto/Mazaki-White2-Kasumi-Gyuto-210mm-Knife-Mazaki-chef-culinary-japanese-knife-knives_1200x.jpeg", // local file in public/images/
       id: 3,
-      linkUrl: "shop/sneakers",
+      linkUrl: "shop/mazaki",
     },
     {
       title: "takeda",
@@ -31,7 +31,7 @@ const INITIAL_STATE = {
         "/images/knife-img/takeda/165NasNakiri/Takeda-NAS-Nakiri-165mm-Knife_1200x.jpeg", // local file in public/images/
       size: "large",
       id: 4,
-      linkUrl: "shop/womens",
+      linkUrl: "shop/takeda",
     },
     {
       title: "watanabe",
@@ -40,7 +40,7 @@ const INITIAL_STATE = {
         "images/knife-img/watanabe/180mmProNakiri/180mm-Pro-Nakiri_files/nakkiri180_big1.jpg", // local file in public/images/
       size: "large",
       id: 5,
-      linkUrl: "shop/mens",
+      linkUrl: "shop/watanabe",
     },
   ],
 };

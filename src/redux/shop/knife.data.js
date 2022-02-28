@@ -2,11 +2,11 @@ const PRODUCT_DATA = {
   ashi: {
     id: 1,
     title: "Ashi",
-    routeName: "hatsss",
+    routeName: "ashi",
     items: [
       {
         id: 1,
-        name: "SHOPDATA Brim",
+        name: "Blue Brim",
         imageUrl: "https://i.ibb.co/ZYW3VTp/brown-brim.png",
         price: 25,
       },
