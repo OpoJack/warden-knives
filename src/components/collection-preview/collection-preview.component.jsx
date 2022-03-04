@@ -3,20 +3,26 @@ import CollectionItem from "../collection-item/collection-item.component";
 import "./collection-preview.styles.scss";
 import FadeInSection from "../scroll-fade/scroll-fade.component";
 
+import {
+  CollectionPreviewContainer,
+  CollectionPreviewTitle,
+  CollectionPreviewDiv,
+} from "./collection-preview.styles";
+
 const CollectionPreview = ({ title, items }) => (
-  <div className="collection-preview">
+  <CollectionPreviewContainer>
     <FadeInSection>
-      <h1 className="title">{title.toUpperCase()}</h1>
-      <div className="preview">
+      <CollectionPreviewTitle>{title.toUpperCase()}</CollectionPreviewTitle>
+      <CollectionPreviewDiv>
         {items
           //Filter to only display the first 4 items
           .filter((item, index) => index < 4)
           .map((item) => (
             <CollectionItem key={item.id} item={item} />
           ))}
-      </div>
+      </CollectionPreviewDiv>
     </FadeInSection>
-  </div>
+  </CollectionPreviewContainer>
 );
 
 export default CollectionPreview;

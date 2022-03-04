@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component";
 import CollectionPage from "../collection/collection.component";
 
+import "../../components/with-spinner/with-spinner.styles.scss";
+
 import { updateCollections } from "../../redux/shop/shop.actions";
 
 import {
@@ -13,6 +15,10 @@ import {
 } from "../../firebase/firebase.utils";
 
 class ShopPage extends React.Component {
+  state = {
+    loading: true,
+  };
+
   unsubscribeFromSnapshot = null;
 
   componentDidMount() {
@@ -23,6 +29,7 @@ class ShopPage extends React.Component {
       async (snapshot) => {
         const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
         updateCollections(collectionsMap);
+        this.setState({ loading: false });
       }
     );
   }
@@ -31,10 +38,30 @@ class ShopPage extends React.Component {
 
     return (
       <div className="shop-page">
-        <Route exact path={`${match.path}`} component={CollectionsOverview} />
+        <Route
+          exact
+          path={`${match.path}`}
+          render={(props) =>
+            this.state.loading ? (
+              <div className="SpinnerOverlay">
+                <div className="SpinnerContainer" />
+              </div>
+            ) : (
+              <CollectionsOverview />
+            )
+          }
+        />
         <Route
           path={`${match.path}/:collectionId`}
-          component={CollectionPage}
+          render={(props) =>
+            this.state.loading ? (
+              <div className="SpinnerOverlay">
+                <div className="SpinnerContainer" />
+              </div>
+            ) : (
+              <CollectionPage />
+            )
+          }
         />
       </div>
     );

@@ -25,7 +25,7 @@ class App extends React.Component {
   //If the user is signed in, we will create a user profile document for them
   //If the user is signed out, we will delete the user profile document for them
   componentDidMount() {
-    const { setCurrentUser, collectionsArray } = this.props;
+    const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {

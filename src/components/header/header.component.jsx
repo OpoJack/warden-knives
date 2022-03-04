@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
@@ -12,44 +11,40 @@ import "./header.styles.scss";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
 
+import {
+  HeaderContainer,
+  HeaderTitle,
+  LogoContainer,
+  OptionsContainer,
+  OptionLink,
+} from "./header.styles";
+
 const Header = ({ currentUser, hidden }) => (
-  <div className="header">
-    <Link className="logo-container" to="/">
+  <HeaderContainer>
+    <LogoContainer to="/">
       <Logo className="logo" />
-    </Link>
-    <Link className="title" to="/">
-      WARDEN KNIVES
-    </Link>
-    <div className="options">
-      <Link className="option" to="/shop">
-        SHOP ALL
-      </Link>
-      <Link className="option" to="/contact">
-        SHOP BY MAKER
-      </Link>
-      <Link className="option" to="/shop">
-        SHOP BY SHAPE
-      </Link>
-      <Link className="option" to="/shop">
-        ACCESSORIES
-      </Link>
+    </LogoContainer>
+    <HeaderTitle to="/">WARDEN KNIVES</HeaderTitle>
+    <OptionsContainer>
+      <OptionLink to="/shop">SHOP ALL</OptionLink>
+      <OptionLink to="/contact">SHOP BY MAKER</OptionLink>
+      <OptionLink to="/shop">SHOP BY SHAPE</OptionLink>
+      <OptionLink to="/shop">ACCESSORIES</OptionLink>
       {
         //If user is logged in, render the Sign Out button
         //else, render the Sign In button
         currentUser ? (
-          <div className="option" onClick={() => auth.signOut()}>
+          <OptionLink as="div" onClick={() => auth.signOut()}>
             SIGN OUT
-          </div>
+          </OptionLink>
         ) : (
-          <Link className="option" to="/signin">
-            SIGN IN
-          </Link>
+          <OptionLink to="/signin">SIGN IN</OptionLink>
         )
       }
       <CartIcon />
-    </div>
+    </OptionsContainer>
     {hidden ? null : <CartDropdown />}
-  </div>
+  </HeaderContainer>
 );
 
 //Get currentUser value from the user which is destructured from the state. This is done with {}
