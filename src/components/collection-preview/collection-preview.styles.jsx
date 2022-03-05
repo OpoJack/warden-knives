@@ -6,16 +6,19 @@ export const CollectionPreviewContainer = styled.div`
   margin-bottom: 30px;
 `;
 
-export const CollectionPreviewTitle = styled.h1`
+export const TitleContainer = styled.h1`
   font-size: 28px;
   margin-bottom: 25px;
   cursor: pointer;
+  text-align: left;
+  width: 10%;
+
   &:hover {
-    color: grey;
+    color: red;
   }
 `;
 
-export const CollectionPreviewDiv = styled.div`
+export const PreviewContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;

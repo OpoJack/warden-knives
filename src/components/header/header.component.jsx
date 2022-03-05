@@ -7,7 +7,6 @@ import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 
-import "./header.styles.scss";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import { auth } from "../../firebase/firebase.utils";
 
@@ -22,7 +21,7 @@ import {
 const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
     <LogoContainer to="/">
-      <Logo className="logo" />
+      <Logo />
     </LogoContainer>
     <HeaderTitle to="/">WARDEN KNIVES</HeaderTitle>
     <OptionsContainer>

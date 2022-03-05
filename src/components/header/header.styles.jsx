@@ -7,8 +7,6 @@ export const HeaderContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0px;
-  align-items: center;
 
   @media screen and (max-width: 800px) {
     height: 60px;
@@ -20,10 +18,11 @@ export const HeaderContainer = styled.div`
 export const HeaderTitle = styled(Link)`
   font-size: 2rem;
   font-weight: bold;
-  width: 25%;
-  padding: 24px 85px;
+  width: 90%;
+  padding: 10px 10px;
   display: flex;
   position: relative;
+  text-align: center;
 `;
 
 export const LogoContainer = styled(Link)`
@@ -33,7 +32,7 @@ export const LogoContainer = styled(Link)`
 `;
 
 export const OptionsContainer = styled.div`
-  width: 50%;
+  width: 60%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -43,7 +42,5 @@ export const OptionsContainer = styled.div`
 export const OptionLink = styled(Link)`
   padding: 10px 10px;
   cursor: pointer;
-  border-bottom: 1px;
-  border-color: black;
-  text-align: center;
+  text-align: left;
 `;
