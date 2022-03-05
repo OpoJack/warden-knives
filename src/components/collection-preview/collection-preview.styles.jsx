@@ -7,11 +7,12 @@ export const CollectionPreviewContainer = styled.div`
 `;
 
 export const TitleContainer = styled.h1`
-  font-size: 28px;
+  font-size: 35px;
   margin-bottom: 25px;
   cursor: pointer;
   text-align: left;
   width: 10%;
+  padding-left: 15px;
 
   &:hover {
     color: red;
