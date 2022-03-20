@@ -10,10 +10,10 @@
 
 # production
 /build
-src/firebase
-.firebase
-.firebaserc
-.firebaseignore
+# src/firebase
+# .firebase
+# .firebaserc
+# .firebaseignore
 .github/workflows/
 
 
