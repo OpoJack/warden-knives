@@ -2,6 +2,7 @@ import React from "react";
 
 import CollectionItem from "../collection-item/collection-item.component";
 import FadeInSection from "../scroll-fade/scroll-fade.component";
+import { Link } from "react-router-dom";
 
 import {
   CollectionPreviewContainer,
@@ -12,7 +13,9 @@ import {
 const CollectionPreview = ({ title, items }) => (
   <CollectionPreviewContainer>
     <FadeInSection>
-      <TitleContainer>{title.toUpperCase()}</TitleContainer>
+      <Link to={`/shop/${title.toLowerCase()}`}>
+        <TitleContainer>{title.toUpperCase()}</TitleContainer>
+      </Link>
       <PreviewContainer>
         {items
           //Filter to only display the first 4 items

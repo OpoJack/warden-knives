@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -22,8 +21,6 @@ class ShopPage extends React.Component {
   state = {
     loading: true,
   };
-
-  getProductData = () => {};
 
   unsubscribeFromSnapshot = null;
 

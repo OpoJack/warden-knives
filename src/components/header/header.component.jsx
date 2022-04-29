@@ -20,24 +20,22 @@ import {
 
 const Header = ({ currentUser, hidden }) => (
   <HeaderContainer>
-    <LogoContainer to="/">
+    <LogoContainer to='/'>
       <Logo />
     </LogoContainer>
-    <HeaderTitle to="/">WARDEN KNIVES</HeaderTitle>
+    <HeaderTitle to='/'>WARDEN KNIVES</HeaderTitle>
     <OptionsContainer>
-      <OptionLink to="/shop">SHOP ALL</OptionLink>
-      <OptionLink to="/contact">SHOP BY MAKER</OptionLink>
-      <OptionLink to="/shop">SHOP BY SHAPE</OptionLink>
-      <OptionLink to="/shop">ACCESSORIES</OptionLink>
+      <OptionLink to='/shop'>SHOP ALL</OptionLink>
+
       {
         //If user is logged in, render the Sign Out button
         //else, render the Sign In button
         currentUser ? (
-          <OptionLink as="div" onClick={() => auth.signOut()}>
+          <OptionLink as='div' onClick={() => auth.signOut()}>
             SIGN OUT
           </OptionLink>
         ) : (
-          <OptionLink to="/signin">SIGN IN</OptionLink>
+          <OptionLink to='/signin'>SIGN IN</OptionLink>
         )
       }
       <CartIcon />

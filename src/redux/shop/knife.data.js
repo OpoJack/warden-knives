@@ -5,6 +5,7 @@ const PRODUCT_DATA = {
     routeName: "ashi",
     items: [
       {
+        //https://i.ibb.co/cvpntL1/hats.png
         id: 1,
         name: "Ashi Ginga Stainless Gyuto 240mm",
         shape: "Gyuto",
