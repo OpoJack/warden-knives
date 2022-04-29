@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Route } from "react-router-dom";
 import { connect } from "react-redux";
 
@@ -22,6 +23,8 @@ class ShopPage extends React.Component {
     loading: true,
   };
 
+  getProductData = () => {};
+
   unsubscribeFromSnapshot = null;
 
   componentDidMount() {
@@ -37,6 +40,7 @@ class ShopPage extends React.Component {
 
     collectionRef.get().then((snapshot) => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+      console.log(collectionsMap);
       updateCollections(collectionsMap);
       this.setState({ loading: false });
     });
@@ -45,7 +49,7 @@ class ShopPage extends React.Component {
     const { match } = this.props;
     const { loading } = this.state;
     return (
-      <div className="shop-page">
+      <div className='shop-page'>
         <Route
           exact
           path={`${match.path}`}
