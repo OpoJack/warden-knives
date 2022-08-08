@@ -13,30 +13,6 @@ https://wardenknives-db.web.app/
 React / Redux , Sass, Firebase, Stripe
 
 This is a demo project featuring an e-commerce app where users can browse products, add/manager their cart and checkout with Stripe.
-
-## 📝 Dependencies
-
-```json
-"dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "firebase": "^9.6.1",
-    "lodash.memoize": "^4.1.2",
-    "node-sass": "^7.0.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-redux": "^7.2.6",
-    "react-router-dom": "5.2.1",
-    "react-scripts": "5.0.0",
-    "react-stripe-checkout": "^2.6.3",
-    "redux": "^4.1.2",
-    "redux-logger": "^3.0.6",
-    "redux-persist": "^6.0.0",
-    "reselect": "^4.1.5",
-    "web-vitals": "^2.1.0"
-  },
-  ```
   
   
   ## 🛠 Installation & Set Up
@@ -52,7 +28,7 @@ This is a demo project featuring an e-commerce app where users can browse produc
 3. Start the development server
 
    ```sh
-   npm start
+   yarn start
    ```
 
 ## 🚀 Building and Running for Production
