@@ -22,13 +22,21 @@ This is a demo project featuring an e-commerce app where users can browse produc
 2. Install dependencies
 
    ```sh
-   yarn add {package}
+   yarn install
+   ```
+   or
+      ```sh
+   npm i
    ```
 
 3. Start the development server
 
    ```sh
    yarn start
+   ```
+   or
+      ```sh
+   npm start
    ```
 
 ## 🚀 Building and Running for Production
